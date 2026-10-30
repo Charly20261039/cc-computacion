@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="C&amp;C Computación">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#F28C28"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="#082B43" stroke-width="3"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" fill="#082B43">C&amp;C</text>
+</svg>
