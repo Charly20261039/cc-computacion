@@ -1,0 +1,91 @@
+/* Paleta C&C Computación
+   Azul profundo: #0B3C5D  | Naranja: #F28C28
+   Fondo claro:   #F4F7FA  | Texto: #1F2933 */
+
+:root {
+  --azul: #0B3C5D;
+  --azul-oscuro: #082B43;
+  --naranja: #F28C28;
+  --naranja-oscuro: #D97706;
+  --fondo: #F4F7FA;
+  --texto: #1F2933;
+  --blanco: #FFFFFF;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fondo);
+  line-height: 1.6;
+}
+
+.contenedor { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Encabezado */
+header { background: var(--azul); color: var(--blanco); }
+header .contenedor {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 10px; padding-top: 16px; padding-bottom: 16px;
+}
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--blanco); text-decoration: none; }
+.logo span { color: var(--naranja); }
+nav a {
+  color: var(--blanco); text-decoration: none; margin-left: 20px;
+  font-weight: 600; padding-bottom: 4px; border-bottom: 3px solid transparent;
+}
+nav a:hover, nav a.activo { border-bottom-color: var(--naranja); }
+
+/* Portada */
+.portada {
+  background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+  color: var(--blanco); text-align: center; padding: 70px 20px;
+}
+.portada h1 { font-size: 2.2rem; margin-bottom: 14px; }
+.portada p { font-size: 1.15rem; max-width: 700px; margin: 0 auto 26px; }
+
+.boton {
+  display: inline-block; background: var(--naranja); color: var(--blanco);
+  padding: 13px 28px; border-radius: 6px; text-decoration: none;
+  font-weight: 700; border: none; font-size: 1rem; cursor: pointer;
+}
+.boton:hover { background: var(--naranja-oscuro); }
+.boton.secundario { background: transparent; border: 2px solid var(--blanco); margin-left: 10px; }
+.boton.secundario:hover { background: rgba(255,255,255,0.15); }
+
+/* Secciones */
+section { padding: 50px 0; }
+h2 { color: var(--azul); font-size: 1.7rem; margin-bottom: 8px; text-align: center; }
+.subtitulo { text-align: center; margin-bottom: 30px; color: #52606d; }
+
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 22px; }
+.tarjeta {
+  background: var(--blanco); border-radius: 10px; padding: 26px;
+  border-top: 5px solid var(--naranja); box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.tarjeta h3 { color: var(--azul); margin-bottom: 10px; font-size: 1.2rem; }
+
+.franja { background: var(--azul); color: var(--blanco); text-align: center; padding: 40px 20px; }
+.franja h2 { color: var(--blanco); }
+.franja p { max-width: 700px; margin: 10px auto 22px; }
+
+/* Contacto */
+.contacto-caja {
+  background: var(--blanco); border-radius: 10px; padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 640px; margin: 0 auto;
+}
+.dato { font-size: 1.2rem; margin: 14px 0; }
+.dato strong { color: var(--azul); }
+.dato a { color: var(--azul); font-weight: 700; }
+.botones-contacto { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Pie */
+footer { background: var(--azul-oscuro); color: #cbd5e0; text-align: center; padding: 24px 20px; font-size: 0.95rem; }
+footer a { color: var(--naranja); }
+
+@media (max-width: 600px) {
+  .portada h1 { font-size: 1.7rem; }
+  nav a { margin-left: 0; margin-right: 16px; }
+  .boton.secundario { margin-left: 0; margin-top: 10px; }
+}
