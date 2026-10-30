@@ -149,3 +149,24 @@ footer a { color: var(--naranja); }
   .tarjeta { padding: 20px; }
   .miniaturas img { height: 190px; }
 }
+
+/* Logo en el encabezado */
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo img { display: block; border-radius: 9px; }
+.logo .nombre span { color: var(--naranja); }
+
+/* Botón flotante de WhatsApp */
+.wa-flotante {
+  position: fixed; right: 16px; bottom: 16px; z-index: 40;
+  display: flex; align-items: center; gap: 8px;
+  background: #1FA855; color: var(--blanco); text-decoration: none;
+  font-weight: 700; padding: 12px 18px 12px 14px; border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+}
+.wa-flotante:hover { background: #178a45; }
+@media (max-width: 600px) {
+  .wa-flotante { padding: 13px; }
+  .wa-flotante span { display: none; }
+}
+.logo .nombre { color: var(--blanco); }
+footer { padding-bottom: 80px; }
