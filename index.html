@@ -28,33 +28,111 @@
 <section>
   <div class="contenedor">
     <h2>Nuestras soluciones</h2>
-    <p class="subtitulo">Disponemos de sistemas propios, estándar o a medida.</p>
+    <p class="subtitulo">Disponemos de sistemas propios, estándar o a medida. Tocá una tarjeta para ver el detalle.</p>
 
     <div class="tarjetas">
-      <div class="tarjeta">
-        <h3>Gestión de ventas</h3>
-        <p>Sistemas de gestión de ventas para distintos rubros, estándar o adaptados a tu negocio.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Sueldos y jornales</h3>
-        <p>Sistema para la liquidación de sueldos y jornales.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Instituciones educativas</h3>
-        <p>Sistemas de gestión pensados para instituciones educativas.</p>
-      </div>
-      <div class="tarjeta">
-        <h3>Integración con ARCA</h3>
-        <p>Módulo de integración directa con ARCA para programadores.</p>
-      </div>
+
+      <!-- Gestión de ventas -->
+      <details class="tarjeta">
+        <summary>
+          <h3>Gestión de ventas</h3>
+          <span class="resumen">Sistemas de gestión de ventas para distintos rubros, estándar o adaptados a tu negocio.</span>
+          <span class="mas"></span>
+        </summary>
+        <div class="detalle">
+          <p>Emite Facturas, Notas de Débito y de Crédito mediante impresoras fiscales o Web Services, con los últimos requerimientos de ARCA.</p>
+          <ul>
+            <li>Control de stock.</li>
+            <li>Cuenta corriente deudora por cliente.</li>
+            <li>Cuenta corriente acreedora por proveedor.</li>
+            <li>Comisiones por vendedor (cuenta corriente por vendedor).</li>
+            <li>Control de ingresos y egresos de caja.</li>
+            <li>Estadísticas.</li>
+          </ul>
+          <div class="miniaturas">
+            <a href="#v-ventas-1"><img src="imagenes/ventas-1.jpg" alt="Pantalla de emisión de comprobantes de ventas con factura electrónica" loading="lazy"></a>
+            <a href="#v-ventas-2"><img src="imagenes/ventas-2.jpg" alt="Pantalla de actualización de la base de datos de artículos" loading="lazy"></a>
+          </div>
+        </div>
+      </details>
+
+      <!-- Sueldos y jornales -->
+      <details class="tarjeta">
+        <summary>
+          <h3>Sueldos y jornales</h3>
+          <span class="resumen">Sistema para la liquidación de sueldos y jornales.</span>
+          <span class="mas"></span>
+        </summary>
+        <div class="detalle">
+          <p>Permite liquidar sueldos en segundos para cualquier convenio laboral. Actualizado a la última legislación laboral vigente.</p>
+          <p>Posibilidad de agregar reloj-control de ingreso/egreso del personal, trasladando automáticamente los datos del reloj-control a la liquidación.</p>
+          <div class="miniaturas">
+            <a href="#v-sueldos-1"><img src="imagenes/sueldos-1.jpg" alt="Menú de liquidaciones del sistema de sueldos y jornales" loading="lazy"></a>
+            <a href="#v-sueldos-2"><img src="imagenes/sueldos-2.jpg" alt="Ejemplo de recibo de haberes emitido por el sistema" loading="lazy"></a>
+          </div>
+        </div>
+      </details>
+
+      <!-- Instituciones educativas -->
+      <details class="tarjeta">
+        <summary>
+          <h3>Instituciones educativas</h3>
+          <span class="resumen">Sistemas de gestión pensados para instituciones educativas.</span>
+          <span class="mas"></span>
+        </summary>
+        <div class="detalle">
+          <p>Para los niveles educativos Secundario y Terciario (pueden funcionar por separado). Compuesto por 4 módulos, que también pueden funcionar por separado:</p>
+          <ol>
+            <li><strong>Secretaría:</strong> carga de calificaciones y emisión de los boletines informativos respectivos.</li>
+            <li><strong>Cobranzas:</strong> control total de cobranzas, con descuentos e intereses automáticos por alumno.</li>
+            <li><strong>Preceptoría:</strong> registro de inasistencias y emisión de constancias.</li>
+            <li><strong>Configuración:</strong> configuración del sistema, administración de usuarios y estadísticas.</li>
+          </ol>
+          <div class="miniaturas">
+            <a href="#v-educativas-1"><img src="imagenes/educativas-1.jpg" alt="Pantalla de actualización de calificaciones de alumnos" loading="lazy"></a>
+            <a href="#v-educativas-2"><img src="imagenes/educativas-2.jpg" alt="Pantalla de emisión de recibos de cobranzas por aranceles" loading="lazy"></a>
+          </div>
+        </div>
+      </details>
+
+      <!-- Integración con ARCA -->
+      <details class="tarjeta">
+        <summary>
+          <h3>Integración con ARCA</h3>
+          <span class="resumen">Módulo de integración directa con ARCA para programadores.</span>
+          <span class="mas"></span>
+        </summary>
+        <div class="detalle">
+          <p>Módulo independiente de integración con ARCA, con los últimos requerimientos, para programadores y desarrolladores.</p>
+          <ul>
+            <li>Funciona en conjunto con cualquier lenguaje.</li>
+            <li>Recibe un archivo de entrada y devuelve el resultado en otro archivo, con las respuestas de ARCA.</li>
+            <li>Apoyo total durante la implementación.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- Sistemas a medida (sin detalle) -->
       <div class="tarjeta">
         <h3>Sistemas a medida</h3>
         <p>Si tu necesidad es particular, desarrollamos el sistema que tu gestión requiere.</p>
       </div>
-      <div class="tarjeta">
-        <h3>Cuota mensual accesible</h3>
-        <p>Accedé a la tecnología más confiable abonando una pequeña cuota mensual.</p>
-      </div>
+
+      <!-- Cuota mensual -->
+      <details class="tarjeta">
+        <summary>
+          <h3>Cuota mensual accesible</h3>
+          <span class="resumen">Accedé a la tecnología más confiable abonando una pequeña cuota mensual.</span>
+          <span class="mas"></span>
+        </summary>
+        <div class="detalle">
+          <p>Con una pequeña cuota mensual se instala el sistema en la modalidad actual, donde quedan habilitadas todas las funciones disponibles.</p>
+          <div class="miniaturas">
+            <a href="#v-cuota-1"><img src="imagenes/cuota-1.jpg" alt="Notebook con un sistema de gestión y una alcancía: grandes resultados con poca inversión" loading="lazy"></a>
+          </div>
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
@@ -68,6 +146,15 @@
 <footer>
   <p>&copy; C&amp;C Computación &middot; Tel. <a href="tel:+543815879447">3815879447</a> &middot; <a href="mailto:cc.computacion.tuc@gmail.com">cc.computacion.tuc@gmail.com</a></p>
 </footer>
+
+<!-- Visor de imágenes: se abre al tocar una miniatura, se cierra tocando la imagen o la X -->
+<div class="visor" id="v-ventas-1"><a class="fondo" href="#cerrar"><img src="imagenes/ventas-1.jpg" alt="Pantalla de emisión de comprobantes de ventas con factura electrónica"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-ventas-2"><a class="fondo" href="#cerrar"><img src="imagenes/ventas-2.jpg" alt="Pantalla de actualización de la base de datos de artículos"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-sueldos-1"><a class="fondo" href="#cerrar"><img src="imagenes/sueldos-1.jpg" alt="Menú de liquidaciones del sistema de sueldos y jornales"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-sueldos-2"><a class="fondo" href="#cerrar"><img src="imagenes/sueldos-2.jpg" alt="Ejemplo de recibo de haberes emitido por el sistema"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-educativas-1"><a class="fondo" href="#cerrar"><img src="imagenes/educativas-1.jpg" alt="Pantalla de actualización de calificaciones de alumnos"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-educativas-2"><a class="fondo" href="#cerrar"><img src="imagenes/educativas-2.jpg" alt="Pantalla de emisión de recibos de cobranzas por aranceles"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
+<div class="visor" id="v-cuota-1"><a class="fondo" href="#cerrar"><img src="imagenes/cuota-1.jpg" alt="Notebook con un sistema de gestión y una alcancía: grandes resultados con poca inversión"></a><a class="cerrar" href="#cerrar" aria-label="Cerrar">&times;</a></div>
 
 </body>
 </html>

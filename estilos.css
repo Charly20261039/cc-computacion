@@ -66,6 +66,64 @@ h2 { color: var(--azul); font-size: 1.7rem; margin-bottom: 8px; text-align: cent
 }
 .tarjeta h3 { color: var(--azul); margin-bottom: 10px; font-size: 1.2rem; }
 
+/* Tarjetas desplegables */
+details.tarjeta summary {
+  list-style: none; cursor: pointer; display: block;
+}
+details.tarjeta summary::-webkit-details-marker { display: none; }
+details.tarjeta summary:focus-visible { outline: 3px solid var(--naranja); outline-offset: 4px; border-radius: 4px; }
+.resumen { display: block; }
+.mas {
+  display: inline-block; margin-top: 14px; color: var(--naranja-oscuro);
+  font-weight: 700; font-size: 0.95rem;
+}
+.mas::after { content: "Ver detalle +"; }
+details[open].tarjeta .mas::after { content: "Cerrar \2212"; }
+details.tarjeta:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.14); }
+details[open].tarjeta { grid-column: 1 / -1; }
+
+.detalle { margin-top: 18px; padding-top: 18px; border-top: 1px solid #e4e7eb; }
+.detalle p { margin-bottom: 12px; }
+.detalle ul, .detalle ol { margin: 0 0 14px 22px; }
+.detalle li { margin-bottom: 6px; }
+.detalle strong { color: var(--azul); }
+
+.miniaturas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 16px; }
+.miniaturas a {
+  flex: 1 1 240px; max-width: 100%; display: block; position: relative;
+  border: 1px solid #d5dbe1; border-radius: 8px; overflow: hidden; background: #eef1f4;
+}
+.miniaturas img {
+  display: block; width: 100%; height: 230px;
+  object-fit: cover; object-position: top;
+}
+.miniaturas a::after {
+  content: "Tocá para agrandar"; position: absolute; left: 0; right: 0; bottom: 0;
+  background: rgba(8, 43, 67, 0.85); color: var(--blanco);
+  text-align: center; font-size: 0.85rem; padding: 6px;
+}
+.miniaturas a:hover img { opacity: 0.9; }
+
+/* Visor de imágenes (se abre al tocar una miniatura, sin JavaScript) */
+.visor {
+  display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(8, 43, 67, 0.94); z-index: 50;
+}
+.visor:target { display: block; }
+.visor .fondo {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 56px 16px 16px; cursor: zoom-out;
+}
+.visor img {
+  max-width: 100%; max-height: 100%; object-fit: contain;
+  background: var(--blanco); border-radius: 4px;
+}
+.visor .cerrar {
+  position: absolute; top: 8px; right: 16px; color: var(--blanco);
+  font-size: 2.2rem; line-height: 1; text-decoration: none; padding: 6px 10px;
+}
+.visor .cerrar:hover { color: var(--naranja); }
+
 .franja { background: var(--azul); color: var(--blanco); text-align: center; padding: 40px 20px; }
 .franja h2 { color: var(--blanco); }
 .franja p { max-width: 700px; margin: 10px auto 22px; }
@@ -88,4 +146,6 @@ footer a { color: var(--naranja); }
   .portada h1 { font-size: 1.7rem; }
   nav a { margin-left: 0; margin-right: 16px; }
   .boton.secundario { margin-left: 0; margin-top: 10px; }
+  .tarjeta { padding: 20px; }
+  .miniaturas img { height: 190px; }
 }
