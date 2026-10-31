@@ -186,3 +186,21 @@ footer { padding-bottom: 80px; }
 /* Nombre de la empresa un poco más grande */
 .logo { font-size: 1.75rem; }
 @media (max-width: 600px) { .logo { font-size: 1.5rem; } }
+
+/* Formulario de contacto */
+.formulario { margin-top: 26px; }
+.formulario h3 { color: var(--azul); font-size: 1.3rem; margin-bottom: 4px; }
+.aclaracion { color: #52606d; font-size: 0.92rem; margin-bottom: 14px; }
+.formulario label { display: block; font-weight: 700; color: var(--azul); margin: 14px 0 6px; }
+.formulario input[type="text"], .formulario input[type="tel"], .formulario input[type="email"], .formulario textarea {
+  width: 100%; padding: 11px 12px; font: inherit; color: var(--texto);
+  border: 1px solid #b8c2cc; border-radius: 6px; background: var(--blanco);
+}
+.formulario input:focus, .formulario textarea:focus { outline: 3px solid rgba(242, 140, 40, 0.45); border-color: var(--naranja); }
+.formulario textarea { resize: vertical; min-height: 120px; }
+.formulario .boton { margin-top: 20px; }
+.formulario .boton:disabled { opacity: 0.6; cursor: wait; }
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+#resultado { margin-top: 14px; font-weight: 700; }
+#resultado.ok { color: #176B3A; }
+#resultado.error { color: #B42318; }

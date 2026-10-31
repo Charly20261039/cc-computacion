@@ -40,8 +40,86 @@
         <a class="boton" href="mailto:cc.computacion.tuc@gmail.com?subject=Consulta%20desde%20la%20web">Enviar un email</a>
       </div>
     </div>
+
+    <div class="contacto-caja formulario">
+      <h3>Dejanos tu consulta</h3>
+      <p class="aclaracion">Completá el formulario y te respondemos a la brevedad.</p>
+
+      <form id="form-contacto" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="c9477fc2-1341-4d7d-b4aa-8e0a6c122b3a">
+        <input type="hidden" name="subject" value="Consulta desde la web de C&C Computación">
+        <input type="hidden" name="from_name" value="Web C&C Computación">
+        <input type="checkbox" name="botcheck" class="trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="name" required autocomplete="name">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <p class="aclaracion">Dejanos al menos un teléfono o un email para poder responderte.</p>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="boton" id="enviar">Enviar consulta</button>
+        <p id="resultado" role="status" aria-live="polite"></p>
+      </form>
+    </div>
   </div>
 </section>
+
+<script>
+  // Envío del formulario sin salir de la página (servicio Web3Forms)
+  (function () {
+    var form = document.getElementById("form-contacto");
+    var boton = document.getElementById("enviar");
+    var aviso = document.getElementById("resultado");
+
+    function mostrar(texto, ok) {
+      aviso.textContent = texto;
+      aviso.className = ok ? "ok" : "error";
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!form.telefono.value.trim() && !form.email.value.trim()) {
+        mostrar("Por favor dejanos un teléfono o un email para poder responderte.", false);
+        return;
+      }
+      boton.disabled = true;
+      boton.textContent = "Enviando...";
+      aviso.textContent = "";
+
+      var datos = {};
+      new FormData(form).forEach(function (valor, clave) { datos[clave] = valor; });
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(datos)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (r) {
+          if (r.success) {
+            mostrar("¡Gracias! Recibimos tu consulta y te respondemos a la brevedad.", true);
+            form.reset();
+          } else {
+            mostrar("No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp al 3812144382.", false);
+          }
+        })
+        .catch(function () {
+          mostrar("No pudimos enviar el mensaje. Probá de nuevo o escribinos por WhatsApp al 3812144382.", false);
+        })
+        .then(function () {
+          boton.disabled = false;
+          boton.textContent = "Enviar consulta";
+        });
+    });
+  })();
+</script>
 
 <footer>
   <p>&copy; C&amp;C Computación &middot; Tel. <a href="tel:+543812144382">3812144382</a> &middot; <a href="mailto:cc.computacion.tuc@gmail.com">cc.computacion.tuc@gmail.com</a> &middot; <a href="https://www.cc-computacion.com.ar">www.cc-computacion.com.ar</a></p>
