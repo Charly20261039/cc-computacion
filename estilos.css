@@ -170,3 +170,15 @@ footer a { color: var(--naranja); }
 }
 .logo .nombre { color: var(--blanco); }
 footer { padding-bottom: 80px; }
+
+/* Fondo tecnológico en la portada */
+.portada {
+  background:
+    linear-gradient(135deg, rgba(11, 60, 93, 0.55) 0%, rgba(8, 43, 67, 0.70) 100%),
+    url("imagenes/fondo-tecnologico.svg") center / cover no-repeat,
+    var(--azul);
+}
+.portada h1, .portada p { text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45); }
+
+/* Logo propio (ícono) */
+.logo img { border-radius: 0; filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4)); }
