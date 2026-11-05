@@ -2,10 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cc-computacion.com.ar/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://cc-computacion.com.ar/contacto.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://cc-computacion.com.ar/gestion-de-ventas.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://cc-computacion.com.ar/sueldos-y-jornales.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://cc-computacion.com.ar/instituciones-educativas.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://cc-computacion.com.ar/integracion-arca.html</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
 </urlset>
